@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .vertical-menu {
+        width: 200px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 15%;
+        background-color: #f1f1f1;
+        height: 100%; /* Full height */
+        position: fixed; /* Make it stick, even on scroll */
+        overflow: auto;
+      }
+
+      .vertical-menu a {
+        background-color: #eee;
+        color: black;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+      }
+
+      .vertical-menu a:hover {
+        background-color: #ccc;
+      }
+
+      .vertical-menu a.active {
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a>Disaster Recovery Application</a></li>
+    </ul>
+
+    <div class="vertical-menu">
+      <a routerLink="/jobs">Job Code Management</a>
+      <a routerLink="/machines">Machine Management</a>
+      <a href="#"> </a>
+      <a href="#">Timecard Approval</a>
+    </div>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </body>
+</html>
