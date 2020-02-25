@@ -3,17 +3,22 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { JobsComponent } from "../src/app/jobs/jobs.component";
-import { MachinesComponent } from "../src/app/machines/machines.component";
-import { TimecardsComponent } from "../src/app/timecards/timecards.component";
+import { JobsComponent } from "./jobs/jobs.component";
+import { MachinesComponent } from "./machines/machines.component";
+import { TimecardsComponent } from "./timecards/timecards.component";
 import { HttpClientModule } from "@angular/common/http";
-import { AddJobComponent } from "../src/app/add-job/add-job.component";
+import { AddJobComponent } from "./add-job/add-job.component";
 import { FormsModule } from "@angular/forms";
 import { EditJobComponent } from './edit-job/edit-job.component';
 import { DeleteJobComponent } from './delete-job/delete-job.component';
 import { AddMachineComponent } from './add-machine/add-machine.component';
 import { EditMachineComponent } from './edit-machine/edit-machine.component';
 import { DeleteMachineComponent } from './delete-machine/delete-machine.component';
+import { SubmitTimecardComponent } from './submit-timecard/submit-timecard.component';
+import { AddTimecardComponent } from './add-timecard/add-timecard.component';
+import { EditTimecardComponent } from './edit-timecard/edit-timecard.component';
+import { DeleteTimecardComponent } from './delete-timecard/delete-timecard.component';
+import { TimecardDetailComponent } from './timecard-detail/timecard-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { DeleteMachineComponent } from './delete-machine/delete-machine.componen
     DeleteJobComponent,
     AddMachineComponent,
     EditMachineComponent,
-    DeleteMachineComponent
+    DeleteMachineComponent,
+    SubmitTimecardComponent,
+    AddTimecardComponent,
+    EditTimecardComponent,
+    DeleteTimecardComponent,
+    TimecardDetailComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
