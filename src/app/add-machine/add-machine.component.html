@@ -1,0 +1,46 @@
+<style>
+  div {
+    position: relative;
+    left: 250px;
+  }
+</style>
+<div>
+  <div class="form-group">
+    <h3>Add New Machine</h3>
+    <label>Machine Code</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="machineModel.MachineCode"
+      />
+    </p>
+    <label>Description</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="machineModel.Description"
+      />
+    </p>
+    <label>Hourly Rate</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="machineModel.HrRent"
+      />
+    </p>
+    <label>Max Hours per Day</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="machineModel.MaxHrPerDay"
+      />
+    </p>
+    <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+      Register
+    </button>
+  </div>
+</div>

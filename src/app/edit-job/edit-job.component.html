@@ -1,0 +1,33 @@
+<style>
+  div {
+    position: relative;
+    left: 250px;
+  }
+</style>
+<div>
+  <label>ID</label>
+  <p>
+    <input disabled type="text" [(ngModel)]="jobModel.Id" />
+  </p>
+
+  <label>Job Code</label>
+  <p>
+    <input required type="text" [(ngModel)]="jobModel.JobCode" />
+  </p>
+
+  <label>Description</label>
+  <p>
+    <input type="text" [(ngModel)]="jobModel.Description" />
+  </p>
+  <label>Hourly Rate</label>
+  <p>
+    <input type="text" [(ngModel)]="jobModel.HrRate" />
+  </p>
+  <label>Max Hour per Day</label>
+  <p>
+    <input type="text" [(ngModel)]="jobModel.MaxHrPerDay" />
+  </p>
+  <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+    Register
+  </button>
+</div>
