@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
 import { MachinesService } from "../shared/machines.service";
 import { MachinesModel } from "../shared/machinesModel";
+//test
+
 @Component({
   selector: "app-add-machine",
   templateUrl: "./add-machine.component.html",
