@@ -4,6 +4,7 @@ import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { IJobs } from "./jobs";
 import { JobsModel } from "./jobsModel";
+import { FormGroup } from "@angular/forms";
 @Injectable({
   providedIn: "root"
 })
@@ -11,7 +12,7 @@ export class JobsService {
   private _url: string = "https://localhost:44366/api/jobs";
   constructor(private http: HttpClient) {}
 
-  getJobs(): Observable<IJobs[]> {
+  public getJobs(): Observable<IJobs[]> {
     return this.http
       .get<IJobs[]>(this._url)
       .pipe(catchError(this.errorHandler));
@@ -19,9 +20,19 @@ export class JobsService {
   // addJobs(): Observable<IJobs[]>{
   //   return this.http.post<IJobs[]>(this._url,)
   // }
-  addJob(job: JobsModel) {
+  public addJob(job: JobsModel) {
     return this.http
       .post<any>(this._url, job)
+      .pipe(catchError(this.errorHandler));
+  }
+  public editJob(job: JobsModel, id: number) {
+    return this.http
+      .put<any>(this._url + "/" + id, job)
+      .pipe(catchError(this.errorHandler));
+  }
+  public deleteJob(id: number) {
+    return this.http
+      .delete<any>(this._url + "/" + id)
       .pipe(catchError(this.errorHandler));
   }
   errorHandler(error: HttpErrorResponse) {

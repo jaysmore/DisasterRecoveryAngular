@@ -1,0 +1,38 @@
+<style>
+  div {
+    position: relative;
+    left: 250px;
+  }
+</style>
+<div>
+  <div class="form-group">
+    <h3>Add New Job</h3>
+    <label>Job Code</label>
+    <p>
+      <input class="form-control" type="text" [(ngModel)]="jobModel.JobCode" />
+    </p>
+    <label>Description</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="jobModel.Description"
+      />
+    </p>
+    <label>Hourly Rate</label>
+    <p>
+      <input class="form-control" type="text" [(ngModel)]="jobModel.HrRate" />
+    </p>
+    <label>Max Hours per Day</label>
+    <p>
+      <input
+        class="form-control"
+        type="text"
+        [(ngModel)]="jobModel.MaxHrPerDay"
+      />
+    </p>
+    <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+      Register
+    </button>
+  </div>
+</div>

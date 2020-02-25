@@ -1,0 +1,39 @@
+<style>
+  div {
+    position: relative;
+    left: 250px;
+  }
+</style>
+<div>
+  <h3>Machines List</h3>
+  <a routerLink="/addmachine">Add New</a>
+  <table class="table table-hover" style="width: auto;">
+    <thead>
+      <tr>
+        <th>
+          Machine Code
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Hourly Rent
+        </th>
+        <th>
+          Max Hours per Day
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let machine of machines">
+        <td>{{ machine.machineCode }}</td>
+        <td>{{ machine.description }}</td>
+        <td>{{ machine.hrRent }}</td>
+        <td>{{ machine.maxHrPerDay }}</td>
+        <td><a routerLink="/editmachine/{{ machine.id }}">Edit</a></td>
+        <td><a routerLink="/deletemachine/{{ machine.id }}">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>
