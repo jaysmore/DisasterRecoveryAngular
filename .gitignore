@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+<<<<<< HEAD
 node_modules
-=======
+
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -9,6 +9,7 @@ node_modules
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+.dist
 
 # dependencies
 /node_modules
@@ -47,4 +48,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
->>>>>>> b31c949488eb1de1ee61926f09ddea82965b26d4
