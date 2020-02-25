@@ -6,9 +6,7 @@
 </style>
 <div>
   <h3>Jobs List</h3>
-  <a [routerLink]="['/addjob']" routerLinkActive="router-link-active"
-    >Add New</a
-  >
+  <a routerLink="/addjob">Add New</a>
   <table class="table table-hover" style="width: auto;">
     <thead>
       <tr>
@@ -32,8 +30,16 @@
         <td>{{ job.description }}</td>
         <td>{{ job.hrRate }}</td>
         <td>{{ job.maxHrPerDay }}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>
+          <a routerLink="/editjob/{{ job.id }}">
+            Edit
+          </a>
+        </td>
+        <td>
+          <a routerLink="/deletejob/{{ job.id }}">
+            Delete
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
