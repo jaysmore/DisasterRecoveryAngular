@@ -8,6 +8,8 @@ import {AuthService} from "../shared/auth.service";
 })
 export class AuthComponent implements OnInit {
 
+  registerMode = false;
+  values: any;
   model: any = {};
   constructor( private authService: AuthService) {}
 
@@ -20,8 +22,27 @@ login() {
   this.authService.login(this.model).subscribe(next => {
     console.log("successful login");
   }, error => {
-    console.log("login failed");
+    console.log(error);
    });
 }
+
+loggedIn() {
+  const token = localStorage.getItem('token');
+  return !!token;
+}
+
+logout(){
+  localStorage.removeItem('token');
+  console.log('logged out');
+} 
+
+registerToggle(){
+  this.registerMode = true;
+  console.log(this.registerMode);
+}
+
+cancelRegisterMode(registerMode: boolean) {
+  this.registerMode = registerMode;
+ }
 
 }

@@ -15,6 +15,9 @@ import { AddMachineComponent } from './add-machine/add-machine.component';
 import { EditMachineComponent } from './edit-machine/edit-machine.component';
 import { DeleteMachineComponent } from './delete-machine/delete-machine.component';
 import { AuthComponent } from './auth/auth.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthService } from './shared/auth.service';
+import { ErrorInterceptorProvider } from './shared/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,10 +31,12 @@ import { AuthComponent } from './auth/auth.component';
     AddMachineComponent,
     EditMachineComponent,
     DeleteMachineComponent,
-    AuthComponent
+    AuthComponent,
+    RegisterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  providers: [ErrorInterceptorProvider,
+    AuthService,],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
