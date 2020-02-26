@@ -35,8 +35,7 @@ import { ErrorInterceptorProvider } from './shared/error.interceptor';
     RegisterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [ErrorInterceptorProvider,
-    AuthService,],
+  providers: [AuthService, ErrorInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
