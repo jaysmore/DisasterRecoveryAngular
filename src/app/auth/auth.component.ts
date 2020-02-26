@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../shared/auth.service";
+import { AlertifyService } from '../shared/alertify.service';
 
 @Component({
   selector: 'app-auth',
@@ -11,7 +12,7 @@ export class AuthComponent implements OnInit {
   registerMode = false;
   values: any;
   model: any = {};
-  constructor( private authService: AuthService) {}
+  constructor( private authService: AuthService, private alertify: AlertifyService) {}
 
   ngOnInit(): void {
   }
@@ -20,9 +21,9 @@ export class AuthComponent implements OnInit {
 login() {
 
   this.authService.login(this.model).subscribe(next => {
-    console.log("successful login");
+    this.alertify.success("Logged in successfully.");
   }, error => {
-    console.log(error);
+    this.alertify.error(error);
    });
 }
 
@@ -33,7 +34,7 @@ loggedIn() {
 
 logout(){
   localStorage.removeItem('token');
-  console.log('logged out');
+  this.alertify.message('Logged Out');
 } 
 
 registerToggle(){
