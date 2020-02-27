@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Stefanie Adrianzen\source\repos\DisasterRecoveryAngular_StefRepo\DisasterRecoveryAngular\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\Stefanie Adrianzen\source\repos\DisasterRecoveryAngular_IntegrationAttempt1\DisasterRecoveryAngular\src\styles.css */"./src/styles.css");
 
 
 /***/ })

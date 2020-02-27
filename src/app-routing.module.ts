@@ -10,6 +10,8 @@ import { DeleteJobComponent } from "./app/delete-job/delete-job.component";
 import { AddMachineComponent } from "./app/add-machine/add-machine.component";
 import { EditMachineComponent } from "./app/edit-machine/edit-machine.component";
 import { DeleteMachineComponent } from "./app/delete-machine/delete-machine.component";
+import { SubmitTimecardComponent } from './app/submit-timecard/submit-timecard.component';
+import { AddTimecardComponent } from './app/add-timecard/add-timecard.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/", pathMatch: "full" },
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: "timecards", component: TimecardsComponent },
   { path: "addjob", component: AddJobComponent },
   { path: "editjob/:id", component: EditJobComponent },
+  { path: "submittimecard", component: SubmitTimecardComponent },
+  { path: "addtimecard", component: AddTimecardComponent },
   { path: "deletejob/:id", component: DeleteJobComponent },
   { path: "addmachine", component: AddMachineComponent },
   { path: "editmachine/:id", component: EditMachineComponent },
