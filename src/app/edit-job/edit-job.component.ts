@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { JobsModel } from "../shared/jobsModel";
 import { JobsService } from "../shared/jobs.service";
 import { ActivatedRoute } from "@angular/router";
-import { TimecardsComponent } from "../timecards/timecards.component";
+
 @Component({
   selector: "app-edit-job",
   templateUrl: "./edit-job.component.html",
@@ -12,7 +12,8 @@ export class EditJobComponent implements OnInit {
   submitted = false;
   errorMsg = "";
   id: number;
-  public jobs;
+  public jobs = [];
+  public machines = [];
   jobModel = new JobsModel(undefined, "", "", null, null);
   constructor(
     private jobService: JobsService,

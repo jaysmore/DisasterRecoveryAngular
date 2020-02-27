@@ -1,0 +1,87 @@
+<style>
+  input {
+    width: auto;
+  }
+  .inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+</style>
+<div style="margin-left:15%;padding:1px 16px;">
+  <h3>Timesheet{{ timecardModel.Id }} Submission</h3>
+  <p>
+    {{ timecardModel.Id }}
+  </p>
+  <span class="inline">
+    <label>Site Code: &nbsp;</label>
+    <input
+      class="form-control"
+      type="text"
+      [(ngModel)]="timecardModel.SiteCode"
+    />
+    <label> &nbsp;Contractor Name: &nbsp;</label>
+    <input class="form-control" type="text" [(ngModel)]="timecardModel.Name" />
+    <label> &nbsp;Date: &nbsp;</label>
+    <input
+      class="form-control"
+      type="date"
+      [(ngModel)]="timecardModel.DateCreated"
+    />
+  </span>
+  <div>
+    <h4>Labor Entry</h4>
+    <span class="inline">
+      <label>Labor Code: &nbsp;</label>
+      <select [(ngModel)]="jobtimecardModel.JobId">
+        <option *ngFor="let job of jobs" [ngValue]="job.Id">
+          {{ job.jobCode }}</option
+        >
+      </select>
+
+      <label> &nbsp;Hrs. Worked: &nbsp;</label>
+      <input
+        class="form-control"
+        type="number"
+        style="width: auto;"
+        [(ngModel)]="timecardModel.TotalJobHours"
+      />
+      <label> &nbsp;Total: &nbsp;</label>
+      <input
+        class="form-control"
+        type="number"
+        style="width: auto;"
+        [(ngModel)]="timecardModel.TotalJobAmount"
+      />
+    </span>
+  </div>
+  <div>
+    <h4>Machine Entry</h4>
+    <span class="inline">
+      <label for="jobs">Machine Code: &nbsp;</label>
+      <select [(ngModel)]="machinetimecardModel.MachineId">
+        <option *ngFor="let m of machines" [ngValue]="m.Id">{{
+          m.machineCode
+        }}</option>
+      </select>
+
+      <label> &nbsp;Hrs. Used: &nbsp;</label>
+      <input
+        class="form-control"
+        type="number"
+        style="width: auto;"
+        [(ngModel)]="timecardModel.TotalMachineHours"
+      />
+      <label> &nbsp;Total: &nbsp;</label>
+      <input
+        class="form-control"
+        type="number"
+        style="width: auto;"
+        [(ngModel)]="timecardModel.TotalMachineAmount"
+      />
+    </span>
+  </div>
+  <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+    Register
+  </button>
+</div>

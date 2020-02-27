@@ -1,5 +1,6 @@
 <div style="margin-left:15%;padding:1px 16px;">
-  <h3>Timesheet Approval</h3>
+  <h3>Timesheet Submission</h3>
+  <a routerLink="/addtimecard">Add New</a>
   <table class="table table-hover" style="width: auto;">
     <thead>
       <tr>
@@ -25,11 +26,9 @@
     </thead>
     <tbody>
       <tr *ngFor="let t of timecards">
-        <td>
-          <a routerLink="/timecarddetail/{{ t.id }}">
-            {{ t.siteCode }}
-          </a>
-        </td>
+        <td><a routerLink="/timecarddetail/{{ t.id }}">
+          {{ t.siteCode }}
+        </a></td>
         <td>{{ t.name }}</td>
         <td>{{ t.totalJobHrs }}</td>
         <td>{{ t.totalMachineHrs }}</td>

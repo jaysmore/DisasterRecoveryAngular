@@ -1,18 +1,22 @@
 import { Component, OnInit } from "@angular/core";
 import { TimecardsService } from "../shared/timecards.service";
+
 @Component({
-  selector: "app-timecards",
-  templateUrl: "./timecards.component.html",
-  styleUrls: ["./timecards.component.css"]
+  selector: "app-submit-timecard",
+  templateUrl: "./submit-timecard.component.html",
+  styleUrls: ["./submit-timecard.component.css"]
 })
-export class TimecardsComponent implements OnInit {
+export class SubmitTimecardComponent implements OnInit {
   public timecards = [];
   public errorMsg;
   constructor(private timecardService: TimecardsService) {}
 
   ngOnInit(): void {
     this.timecardService.getTimecards().subscribe(
-      data => (this.timecards = data),
+      data => {
+        this.timecards = data;
+        console.log(this.timecards);
+      },
       error => (this.errorMsg = error),
       () => console.log("The sequence completed!")
     );
