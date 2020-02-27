@@ -17,6 +17,11 @@ export class MachinesService {
       .get<IMachines[]>(this._url)
       .pipe(catchError(this.errorHandler));
   }
+  getDetail(id: number): Observable<IMachines[]> {
+    return this.http
+      .get<IMachines[]>(this._url + "/" + id)
+      .pipe(catchError(this.errorHandler));
+  }
   public addMachine(machine: MachinesModel) {
     return this.http
       .post<any>(this._url, machine)

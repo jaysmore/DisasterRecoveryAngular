@@ -1,1 +1,54 @@
-<p>edit-machine works!</p>
+<style>
+
+  input {
+    width: auto;
+  }
+</style>
+
+<div style="margin-left:15%;padding:1px 16px;">
+  <h2>Edit employee</h2>
+  <label>ID</label>
+  <p>
+    <input
+      class="form-control"
+      disabled
+      type="text"
+      [(ngModel)]="machineModel.Id"
+    />
+  </p>
+
+  <label>Machine Code</label>
+  <p>
+    <input
+      class="form-control"
+      required
+      type="text"
+      [(ngModel)]="machineModel.MachineCode"
+    />
+  </p>
+
+  <label>Description</label>
+  <p>
+    <input
+      class="form-control"
+      type="text"
+      [(ngModel)]="machineModel.Description"
+    />
+  </p>
+  <label>Hourly Rent</label>
+  <p>
+    <input class="form-control" type="text" [(ngModel)]="machineModel.HrRent" />
+  </p>
+  <label>Max Hours per Day</label>
+  <p>
+    <input
+      class="form-control"
+      type="text"
+      [(ngModel)]="machineModel.MaxHrPerDay"
+    />
+  </p>
+
+  <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+    Register
+  </button>
+</div>

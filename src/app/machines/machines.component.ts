@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { MachinesService } from "../machines/machines.service";
+import { MachinesService } from "../shared/machines.service";
 
 @Component({
   selector: "app-machines",

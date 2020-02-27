@@ -1,36 +1,31 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
-import { IJobs } from "./jobs";
-import { JobsModel } from "./jobsModel";
-import { FormGroup } from "@angular/forms";
+import { IJobTimecard } from "./job-timecard";
+import { JobTimecardModel } from "./job-timecardModel";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 @Injectable({
   providedIn: "root"
 })
-export class JobsService {
-  private _url: string = "https://localhost:44366/api/jobs";
+export class JobTimecardService {
+  private _url: string = "https://localhost:44366/api/jobs_timecard";
   constructor(private http: HttpClient) {}
-
-  public getJobs(): Observable<IJobs[]> {
+  public getJobs(): Observable<IJobTimecard[]> {
     return this.http
-      .get<IJobs[]>(this._url)
+      .get<IJobTimecard[]>(this._url)
       .pipe(catchError(this.errorHandler));
   }
-  public jobDetail(id: number): Observable<IJobs[]> {
+  public getDetail(id: number): Observable<IJobTimecard[]> {
     return this.http
-      .get<IJobs[]>(this._url + "/" + id)
+      .get<IJobTimecard[]>(this._url + "/" + id)
       .pipe(catchError(this.errorHandler));
   }
-  // addJobs(): Observable<IJobs[]>{
-  //   return this.http.post<IJobs[]>(this._url,)
-  // }
-  public addJob(job: JobsModel) {
+  public addJob(job: JobTimecardModel) {
     return this.http
       .post<any>(this._url, job)
       .pipe(catchError(this.errorHandler));
   }
-  public editJob(job: JobsModel, id: number) {
+  public editJob(job: JobTimecardModel, id: number) {
     return this.http
       .put<any>(this._url + "/" + id, job)
       .pipe(catchError(this.errorHandler));

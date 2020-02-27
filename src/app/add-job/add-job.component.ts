@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-
 import { JobsService } from "../shared/jobs.service";
 import { JobsModel } from "../shared/jobsModel";
 import { IJobs } from "../shared/jobs";
@@ -13,10 +12,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./add-job.component.css"]
 })
 export class AddJobComponent implements OnInit {
-
-  //timecard = { Id: null, Name: null, DateCreated: null, isConfirmed: null };
   jobModel = new JobsModel(undefined, "", "", null, null);
-  //jobs: Observable<IJobs>;
 
   submitted: boolean = false;
   errorMsg = "";
@@ -24,7 +20,6 @@ export class AddJobComponent implements OnInit {
 
   ngOnInit(): void {
     //this.onSubmit();
-
     //s console.log(this.jobModel);
   }
   onSubmit() {

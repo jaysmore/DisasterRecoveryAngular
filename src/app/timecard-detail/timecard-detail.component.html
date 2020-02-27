@@ -1,0 +1,30 @@
+<div style="margin-left:15%;padding:1px 16px;">
+  <h3>Timesheet Detail</h3>
+  <p>ID: {{ id }}</p>
+  <p>Site Code: {{ timecard.siteCode }}</p>
+  <p>Contractor Name: {{ timecard.name }}</p>
+  <p>Date created: {{ timecard.dateCreated }}</p>
+  <p>Total Job Hours: {{ timecard.totalJobHrs }}</p>
+  <p>Total Machine Hours: {{ timecard.totalMachineHrs }}</p>
+  <p>Total Job Amount: {{ timecard.totalJobAmount }}</p>
+  <p>Total Machine Amount: {{ timecard.totalMachineAmount }}</p>
+  <p>Confirmation: {{ timecard.isConfirmed }}</p>
+  <p>Associated Job:</p>
+
+  <tr *ngFor="let j of jobs">
+    <td>{{ j.jobCode }}</td>
+    <td>{{ j.description }}</td>
+    <td>{{ j.hrRate }}</td>
+    <td>{{ j.maxHrPerDay }}</td>
+  </tr>
+
+  <p>Associated Machine:</p>
+
+  <tr *ngFor="let machine of machines">
+    <td>{{ machine.machineCode }}</td>
+    <td>{{ machine.description }}</td>
+    <td>{{ machine.hrRent }}</td>
+    <td>{{ machine.maxHrPerDay }}</td>
+  </tr>
+  <button (click)="backClicked()">Back</button>
+</div>
