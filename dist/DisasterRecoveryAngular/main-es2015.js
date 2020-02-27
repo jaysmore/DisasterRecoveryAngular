@@ -71,7 +71,7 @@ const routes = [
     { path: "submittimecard", component: _app_submit_timecard_submit_timecard_component__WEBPACK_IMPORTED_MODULE_11__["SubmitTimecardComponent"] },
     { path: "addtimecard", component: _app_add_timecard_add_timecard_component__WEBPACK_IMPORTED_MODULE_12__["AddTimecardComponent"] },
     { path: "deletejob/:id", component: _app_delete_job_delete_job_component__WEBPACK_IMPORTED_MODULE_7__["DeleteJobComponent"] },
-    { path: "/addmachine", component: _app_add_machine_add_machine_component__WEBPACK_IMPORTED_MODULE_8__["AddMachineComponent"] },
+    { path: "addmachine", component: _app_add_machine_add_machine_component__WEBPACK_IMPORTED_MODULE_8__["AddMachineComponent"] },
     { path: "editmachine/:id", component: _app_edit_machine_edit_machine_component__WEBPACK_IMPORTED_MODULE_9__["EditMachineComponent"] },
     { path: "deletemachine/:id", component: _app_delete_machine_delete_machine_component__WEBPACK_IMPORTED_MODULE_10__["DeleteMachineComponent"] }
 ];

@@ -162,7 +162,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: "deletejob/:id",
       component: _app_delete_job_delete_job_component__WEBPACK_IMPORTED_MODULE_7__["DeleteJobComponent"]
     }, {
-      path: "/addmachine",
+      path: "addmachine",
       component: _app_add_machine_add_machine_component__WEBPACK_IMPORTED_MODULE_8__["AddMachineComponent"]
     }, {
       path: "editmachine/:id",
