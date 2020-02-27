@@ -5,6 +5,7 @@
 </style>
 <div style="margin-left:15%;padding:1px 16px;">
   <div class="form-group">
+
     <h3>Add New Job</h3>
     <label>Job Code</label>
     <p>
@@ -15,11 +16,13 @@
       <input
         class="form-control"
         type="text"
+
         [(ngModel)]="jobModel.Description"
       />
     </p>
     <label>Hourly Rate</label>
     <p>
+
       <input class="form-control" type="text" [(ngModel)]="jobModel.HrRate" />
     </p>
     <label>Max Hours per Day</label>
@@ -27,6 +30,7 @@
       <input
         class="form-control"
         type="text"
+
         [(ngModel)]="jobModel.MaxHrPerDay"
       />
     </p>

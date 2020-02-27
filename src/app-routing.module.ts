@@ -1,20 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-<<<<<<< HEAD:src/app-routing.module.ts
-import { JobsComponent } from "../src/app/jobs/jobs.component";
-import { MachinesComponent } from "../src/app/machines/machines.component";
-import { TimecardsComponent } from "../src/app/timecards/timecards.component";
-=======
-import { JobsComponent } from "./jobs/jobs.component";
-import { MachinesComponent } from "./machines/machines.component";
-import { TimecardsComponent } from "./timecards/timecards.component";
-import { AddJobComponent } from "./add-job/add-job.component";
-import { EditJobComponent } from "./edit-job/edit-job.component";
-import { DeleteJobComponent } from "./delete-job/delete-job.component";
-import { AddMachineComponent } from "./add-machine/add-machine.component";
-import { EditMachineComponent } from "./edit-machine/edit-machine.component";
-import { DeleteMachineComponent } from "./delete-machine/delete-machine.component";
->>>>>>> b31c949488eb1de1ee61926f09ddea82965b26d4:src/app/app-routing.module.ts
+
+import { JobsComponent } from "./app/jobs/jobs.component";
+import { MachinesComponent } from "./app/machines/machines.component";
+import { TimecardsComponent } from "./app/timecards/timecards.component";
+import { AddJobComponent } from "./app/add-job/add-job.component";
+import { EditJobComponent } from "./app/edit-job/edit-job.component";
+import { DeleteJobComponent } from "./app/delete-job/delete-job.component";
+import { AddMachineComponent } from "./app/add-machine/add-machine.component";
+import { EditMachineComponent } from "./app/edit-machine/edit-machine.component";
+import { DeleteMachineComponent } from "./app/delete-machine/delete-machine.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/", pathMatch: "full" },
