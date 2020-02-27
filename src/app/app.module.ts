@@ -38,7 +38,7 @@ import { TimecardDetailComponent } from './timecard-detail/timecard-detail.compo
     EditMachineComponent,
     DeleteMachineComponent,
     AuthComponent,
-    RegisterComponent
+    RegisterComponent,
     SubmitTimecardComponent,
     AddTimecardComponent,
     EditTimecardComponent,
