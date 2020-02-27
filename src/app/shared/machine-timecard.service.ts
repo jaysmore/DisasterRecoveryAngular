@@ -1,41 +1,37 @@
 import { Injectable } from "@angular/core";
+
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
-import { IJobs } from "./jobs";
-import { JobsModel } from "./jobsModel";
-import { FormGroup } from "@angular/forms";
+import { IMachineTimecard } from "./machine-timecard";
+import { MachineTimecardModel } from "./machine-timecardModel";
 @Injectable({
   providedIn: "root"
 })
-export class JobsService {
-  private _url: string = "https://localhost:44366/api/jobs";
+export class MachineTimecardService {
+  private _url: string = "https://localhost:44366/api/machines_timecard";
   constructor(private http: HttpClient) {}
-
-  public getJobs(): Observable<IJobs[]> {
+  getMachines(): Observable<IMachineTimecard[]> {
     return this.http
-      .get<IJobs[]>(this._url)
+      .get<IMachineTimecard[]>(this._url)
       .pipe(catchError(this.errorHandler));
   }
-  public jobDetail(id: number): Observable<IJobs[]> {
+  public getDetail(id: number): Observable<IMachineTimecard[]> {
     return this.http
-      .get<IJobs[]>(this._url + "/" + id)
+      .get<IMachineTimecard[]>(this._url + "/" + id)
       .pipe(catchError(this.errorHandler));
   }
-  // addJobs(): Observable<IJobs[]>{
-  //   return this.http.post<IJobs[]>(this._url,)
-  // }
-  public addJob(job: JobsModel) {
+  public addMachine(machine: MachineTimecardModel) {
     return this.http
-      .post<any>(this._url, job)
+      .post<any>(this._url, machine)
       .pipe(catchError(this.errorHandler));
   }
-  public editJob(job: JobsModel, id: number) {
+  public editMachine(machine: MachineTimecardModel, id: number) {
     return this.http
-      .put<any>(this._url + "/" + id, job)
+      .put<any>(this._url + "/" + id, machine)
       .pipe(catchError(this.errorHandler));
   }
-  public deleteJob(id: number) {
+  public deleteMachine(id: number) {
     return this.http
       .delete<any>(this._url + "/" + id)
       .pipe(catchError(this.errorHandler));

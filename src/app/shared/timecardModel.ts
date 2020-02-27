@@ -10,8 +10,6 @@ export class TimecardModel {
     public TotalJobHours: number,
     public TotalMachineHours: number,
     public TotalJobAmount: number,
-    public TotalMachineAmount: number,
-    public jobModel: JobsModel,
-    public machineModel: MachinesModel
+    public TotalMachineAmount: number
   ) {}
 }

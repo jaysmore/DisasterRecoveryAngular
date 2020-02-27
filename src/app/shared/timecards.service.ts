@@ -20,9 +20,9 @@ export class TimecardsService {
       .pipe(catchError(this.errorHandler));
   }
 
-  getTimecardDetail(id: number): Observable<ITimecard> {
+  getTimecardDetail(id: number): Observable<ITimecard[]> {
     return this.http
-      .get<ITimecard>(this._url + "/" + id)
+      .get<ITimecard[]>(this._url + "/" + id)
       .pipe(catchError(this.errorHandler));
   }
 

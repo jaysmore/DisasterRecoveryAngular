@@ -4,7 +4,7 @@ export interface ITimecard {
   id: number;
   name: string;
   datecreated: Date;
-  isconfirmed: boolean;
+  isConfirmed: boolean;
   sitecode: string;
   totaljobhours: number;
   totalmachinehours: number;
