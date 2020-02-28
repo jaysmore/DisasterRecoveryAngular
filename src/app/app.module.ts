@@ -53,6 +53,7 @@ import { TimecardDetailComponent } from './timecard-detail/timecard-detail.compo
      FormsModule,
   ],
   providers: [AuthService, ErrorInterceptorProvider],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule {}

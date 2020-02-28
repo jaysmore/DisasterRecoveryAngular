@@ -22,6 +22,7 @@ login(model: any) {
           localStorage.setItem('token', user.token);
           this.decodedToken = this.jwtHelper.decodeToken(user.token);
           console.log(this.decodedToken);
+          console.log(this.decodedToken.role);
         }
       })
     );
@@ -36,4 +37,19 @@ loggedIn() {
 }
 
 
+getRole() {
+  return this.decodedToken.role;
 }
+
+isUser() {
+  if (this.decodedToken.role === "USER") return true;
+   return false;
+}
+
+isAdmin() {
+  if (this.decodedToken.role === "ADMIN") return true;
+  return false;
+}
+
+}
+
