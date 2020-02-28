@@ -25,7 +25,7 @@ export class AddJobComponent implements OnInit {
   onSubmit() {
     console.log(this.jobModel);
     this.submitted = true;
-    // this.jobModel.Id = 10;
+    //this.jobModel.Id = 10;
     this.jobsServise.addJob(this.jobModel).subscribe(
       Response => console.log("Successfully added new job.", Response),
       error => (this.errorMsg = error.statusText)

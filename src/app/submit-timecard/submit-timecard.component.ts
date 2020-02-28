@@ -9,7 +9,7 @@ import { TimecardsService } from "../shared/timecards.service";
 export class SubmitTimecardComponent implements OnInit {
   public timecards = [];
   public errorMsg;
-  constructor(private timecardService: TimecardsService) {}
+  constructor(public timecardService: TimecardsService) {}
 
   ngOnInit(): void {
     this.timecardService.getTimecards().subscribe(

@@ -20,7 +20,7 @@ export class JobsService {
   public jobDetail(id: number): Observable<IJobs[]> {
     return this.http
       .get<IJobs[]>(this._url + "/" + id)
-      .pipe(catchError(this.errorHandler));
+      /*.pipe(catchError(this.errorHandler))*/;
   }
   // addJobs(): Observable<IJobs[]>{
   //   return this.http.post<IJobs[]>(this._url,)
